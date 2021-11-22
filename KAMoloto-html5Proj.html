@@ -1,59 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>	
-   <meta charset="UTF-8">
-   <title>Final Project Description</title>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Final Project Description</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      font-family: monospace;
+      font-size: 16px;
+    }
+
+    .collapse {
+      cursor: pointer;
+      padding: 20px;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+      background-color: white;
+    }
+
+    .active,
+    .collapse:hover {
+      background-color: rgb(9, 114, 96);
+      color: aliceblue;
+    }
+
+    .content {
+      display: none;
+      padding: 0 18px;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+      background-color: rgb(255, 219, 219);
+      box-shadow: 1px 2px rgb(52, 53, 53, 1);
+    }
+
+    .text-mark {
+      background-color: yellow;
+      box-shadow: 1px 2px rgb(52, 53, 53, 1);
+    }
+
+    .tx {
+      margin-left: 10px;
+      font-weight: 400;
+      font-size: 20px;
+    }
+
+    #file {
+      height: 20px;
+      margin: 0px 0px 0px 25px;
+    }
+  </style>
+
 </head>
+
 <body>
-  <h1><mark>Colleen van Lent</mark></h1>
+  <h1><span class="text-mark"> K.A Moloto</span></h1>
   <nav>
-      <a href="#">One</a>
-      <a href="https://dvauto.dvtech.co.za/">Two</a>
-      <a href="https://www.linkedin.com/in/kgaugelo-moloto-11603896/">Three</a>
-      <a href="https://github.com/FimKG" ><mark>GitHub</mark> </a>
-    </nav>
+    <a href="#">One</a>
+    <a href="https://dvauto.dvtech.co.za/">dvtech Website</a>
+    <a href="https://www.linkedin.com/in/kgaugelo-moloto-11603896/">linkedin</a>
+    <a href="https://github.com/FimKG"><span class="text-mark">GitHub</span> </a>
+  </nav>
 
-    <section>
-      <h1>Favorite Foods</h1>
-      <ul >
-        <li><mark>Apples</mark></li>
-        <li><mark>Pizza</mark></li>
-        <li><mark>Crab</mark></li>
-        <li><mark>Chocolate Cake</mark></li>
+  <section>
+    <h1>Favorite Foods</h1>
+    <ul>
+      <li><span class="text-mark">Beef</span></li>
+      <li><span class="text-mark">Bacon</span></li>
+      <li><span class="text-mark">Sweet potato</span></li>
+      <li><span class="text-mark">Watermelon</span></li>
+    </ul>
+  </section>
+  <section>
+    <h1><b>Achievements</b></h1>
+    <p>
+      <label for="file">Progress in this course(100%)</label>
+      <progress id="file" value="100" max="100">100%</progress>
+      <br>
+      <label for="file">Progress in this course(20%)</label>
+      <progress id="file" value="20" max="100">20%</progress>
+      <br>
+      <label for="file">Progress in this course(80%)</label>
+      <progress id="file" value="80" max="100">80%</progress>
+      <br>
+    </p>
+  </section>
+  <section>
+    <h2><b>More About Me</b></h2>
+
+    <button type="button" class="collapse"><i class="fa fa-caret-down fa-2x" aria-hidden="true"></i><span class="tx">My
+        Childhood</span></button>
+    <div id="exdText" class="content"><span class="text-mark">I grew up in Germiston Gauteng South Africa.I lived near
+        the Beach and
+        I really miss the sunsets over the
+        water.</span>
+      <h1>Programming languages</h1>
+      <ul>
+        <li><span class="text-mark">JavaScript</span></li>
+        <li><span class="text-mark">HTML</span></li>
+        <li><span class="text-mark">CSS</span></li>
+        <li><span class="text-mark">PHP</span></li>
+        <li><span class="text-mark">C#, ASP.net</span></li>
+        <li><span class="text-mark">MySQL</span></li>
+        <li><span class="text-mark">JAVA</span></li>
       </ul>
-    </section>
-    <section>
-      <h1><b>Achievements</b></h1>
-      <p>
-        <label for="file">Progress in this course(100%)</label>
-        <progress id="file" value="100" max="100"></progress>
-        <br>
-        <label for="file">Progress in this course(20%)</label>
-        <progress value="20" max="100"></progress>
-        <br>
-        <label for="file">Progress in this course(67%)</label>
-        <progress value="67" max="100"></progress>
-        <br>
-      </p>
-    </section>
-    <section>
-      <h2><b>More About Me</b></h2>
-      <p>
-        <i class="fa fa-caret-down fa-2x" aria-hidden="true"></i>My Childhood
-        <br>
-        <mark>I grew up in Germiston Gauteng South Africa.I lived near the Beach and I really miss the sunsets over the water.</mark>
-      </p>
-    </section>
+    </div>
+  </section>
 
-    <footer>
-        <p>
-          <img src="/newlogo.png" alt="">
-          This page was created by <mark>K.A Moloto</mark> & Collen van Lent. To learn more about
-        </p>
-        <p>web design, visit <a href="http://lljeng.com/">Intro to Web Design</a>.</p>
-    </footer>
+  <footer>
+    <p>
+      <img src="/newlogo.png" alt="">
+      This page was created by <span class="text-mark tx">K.A Moloto</span>. To learn more about web design, visit <a
+        href="http://lljeng.com/">Previous Web Design</a>.
+    </p>
+  </footer>
+
+  <script>
+    var collbtn = document.getElementsByClassName("collapse");
+
+    collbtn[0].addEventListener("click", function () {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+
+  </script>
 </body>
+
 </html>
 
 
